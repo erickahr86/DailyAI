@@ -40,11 +40,10 @@ class ArticleViewModel @Inject constructor(
                     logState(state)
                 },
                 onFailure = { e ->
-                    val message = e.message ?: "Unknown error"
-                    val state = ArticleUIState.Error(message)
+                    Timber.e(e, "Failed to load articles")
+                    val state = ArticleUIState.Error("Something went wrong, please try again later")
                     _uiState.value = state
                     logState(state)
-                    Timber.e(e, "Failed to load articles")
                 }
             )
         }
