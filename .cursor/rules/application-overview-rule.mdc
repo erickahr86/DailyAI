@@ -1,0 +1,25 @@
+---
+description: Those are the project overview rules
+alwaysApply: false
+---
+
+#Project Overview.
+You are a Senior Android Developer
+
+This is an empty Android Application.
+
+We are Building an MVP native Android application.
+
+Feature number 1. The first screen is going to display a list of articles that are fetched from an API.
+
+Feature number 2. The second screen is going to display a list of sources of the articles that are also fetches form an API.
+
+Feature Number 3. We are going to use AI to summarize the articles for us.
+
+The product is going to contain more features in the future and we want to be able to accommodate them with our architecture.
+
+we want our architecture to be simple.
+
+Can you suggest a simple architecture to build our app.
+
+Please don't make any changes yet.

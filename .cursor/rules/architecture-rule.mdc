@@ -1,0 +1,71 @@
+---
+description: Those are the architecture rules
+alwaysApply: false
+---
+
+#Application Architecture.
+
+Important: I do not want to include a Domain Layer. Please don't include a domain layer and Use Cases unies instructed otherwise.
+Important: I want the top level packaging to be featured based. So the First package will be articles. Inside the articles package I want only 3 packages: ui, presentation and data.
+
+* UI Layer
+- Single Activity app with Composables
+- Navigation components
+
+* Presentation Layer
+- ViewModels
+- UI State classes
+- Presentation models, eg. Article.
+
+* Data layer
+- Repository implementations
+- Remote Data Sources (API)
+- Data Models, eg. ArticleData
+- NO database or local storage needed
+- Repository Pattern. No interface only repository implementation. Single source of truth. Easy to switch data sources.
+
+* MVVM Pattern
+- ViewModels handle UI logic and UIState 
+- Composables are responsible only for UI
+- State classes represent UI state
+
+* Dependency injection
+- We'll use Hilt dependency injection
+
+* Coroutines & State Flow
+- Coroutines for asynchronous operations
+- Handle API calls and data processing
+- State Flow between View Model and UI for Manage UI State update
+
+* Key concepts
+- Clean Architecture
+- Important: Simplicity
+- Separation of concerns
+- Testability
+- Maintainability
+- I don't want you to create any base classes
+
+I want to follow a packaging structure as in the following example:
+
+com.erick.herrera.daylyai
+├── DaylyAIApplication.kt
+├── MainActivity.kt
+├── ui
+│   └── theme
+│       ├── Color.kt
+│       ├── Theme.kt
+│       └── Type.kt
+└── articles
+    ├── data
+    │   ├── ArticleApi.kt
+    │   ├── ArticleData.kt
+    │   ├── ArticleRepository.kt
+    │   ├── ArticlesResponse.kt
+    │   └── NetworkModule.kt
+    ├── presentation
+    │   ├── Article.kt
+    │   ├── ArticleUIState.kt
+    │   └── ArticleViewModel.kt
+    └── ui
+        ├── ArticleScreen.kt
+        └── ArticleUIStateProvider.kt

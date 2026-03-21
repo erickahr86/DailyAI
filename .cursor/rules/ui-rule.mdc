@@ -1,0 +1,23 @@
+---
+description: Those are the project UI layer rules
+globs:
+    -"**/ui/**/*.kt"
+alwaysApply: true
+---
+
+#UI layer technology Stack and third party libraries.
+Below is the UI tech stack and third part libraries that I want to use:
+
+* UI
+- Jetpack Compose
+- Material 3
+- Compose Navigation
+- Hilt navigation compose
+- State Flow
+- Coil
+- Hilt
+- Coroutines
+- Timber
+
+Please always try to find compatible versions of those dependencies and add them to the build gradle files of my app.
+
