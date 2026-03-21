@@ -78,6 +78,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.coil.compose)
+    implementation(libs.material.icons.extended)
 
     // Data - Retrofit, Moshi, OkHttp (Moshi codegen via KSP)
     implementation(libs.retrofit)
