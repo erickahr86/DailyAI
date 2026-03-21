@@ -1,6 +1,8 @@
-package com.erick.herrera.daylyai.articles.data
+package com.erick.herrera.daylyai.di
 
 import com.erick.herrera.daylyai.BuildConfig
+import com.erick.herrera.daylyai.articles.data.ArticleApi
+import com.erick.herrera.daylyai.sources.data.SourcesApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -63,4 +65,9 @@ object NetworkModule {
     @Singleton
     fun provideArticleApi(retrofit: Retrofit): ArticleApi =
         retrofit.create(ArticleApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideSourcesApi(retrofit: Retrofit): SourcesApi =
+        retrofit.create(SourcesApi::class.java)
 }
